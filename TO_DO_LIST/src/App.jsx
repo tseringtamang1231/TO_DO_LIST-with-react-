@@ -52,7 +52,14 @@ function App() {
                         <span>{task}</span>
                         <div className='flex gap-x-2'>
                         <button className="bg-red-500 text-white px-2 py-1 rounded cursor-pointer">Edit</button>
-                        <button className="bg-red-500 text-white px-2 py-1 rounded cursor-pointer">Delete</button>
+                        <button className="bg-red-500 text-white px-2 py-1 rounded cursor-pointer"
+                        onClick={()=>{
+                              const delet_part = TaskList.filter((_,i)=>{
+                               return  i != index 
+                              })
+                              setlists(delet_part)
+                        }}
+                        >Delete</button>
                         </div>
                     </li> )
               })
